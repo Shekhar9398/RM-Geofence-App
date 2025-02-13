@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */; };
+		F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */; };
+		F40D8DEE2D5E0B85002892F4 /* DrawGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */; };
+		F40D8DF02D5E0B97002892F4 /* CircularGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */; };
+		F40D8DF22D5E0BAA002892F4 /* CoordinateGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */; };
 		F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */; };
 		F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E037A2D5DC6F800EEEC85 /* ContentView.swift */; };
 		F47E037D2D5DC6F900EEEC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */; };
 		F47E03802D5DC6F900EEEC85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47E037F2D5DC6F900EEEC85 /* Preview Assets.xcassets */; };
 		F47E03892D5DC73C00EEEC85 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */; };
-		F47E038D2D5DCCC900EEEC85 /* RadialGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E038C2D5DCCC900EEEC85 /* RadialGeofenceView.swift */; };
+		F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */; };
 		F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */; };
 		F47E03912D5DCDA200EEEC85 /* DrawGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */; };
 		F47E03932D5DCDB800EEEC85 /* CreateGeofencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */; };
@@ -21,13 +25,17 @@
 
 /* Begin PBXFileReference section */
 		F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
+		F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldStyle.swift; sourceTree = "<group>"; };
+		F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawGeofenceManager.swift; sourceTree = "<group>"; };
+		F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGeofenceManager.swift; sourceTree = "<group>"; };
+		F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateGeofenceManager.swift; sourceTree = "<group>"; };
 		F47E03752D5DC6F800EEEC85 /* RMGeofenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMGeofenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGeofenceAppApp.swift; sourceTree = "<group>"; };
 		F47E037A2D5DC6F800EEEC85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F47E037F2D5DC6F900EEEC85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
-		F47E038C2D5DCCC900EEEC85 /* RadialGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGeofenceView.swift; sourceTree = "<group>"; };
+		F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGeofenceView.swift; sourceTree = "<group>"; };
 		F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateGeofenceView.swift; sourceTree = "<group>"; };
 		F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawGeofenceView.swift; sourceTree = "<group>"; };
 		F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofencesView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F40D8DEC2D5E0B6C002892F4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */,
+				F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */,
+				F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F47E036C2D5DC6F800EEEC85 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +83,7 @@
 			children = (
 				F47E03872D5DC71E00EEEC85 /* Main */,
 				F47E03862D5DC70E00EEEC85 /* View */,
+				F40D8DEC2D5E0B6C002892F4 /* Managers */,
 				F47E03942D5DCE2500EEEC85 /* Styles */,
 				F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */,
 				F47E037E2D5DC6F900EEEC85 /* Preview Content */,
@@ -85,7 +104,7 @@
 			children = (
 				F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */,
 				F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */,
-				F47E038C2D5DCCC900EEEC85 /* RadialGeofenceView.swift */,
+				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
 				F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */,
 				F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */,
 			);
@@ -105,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */,
+				F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -180,13 +200,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47E03932D5DCDB800EEEC85 /* CreateGeofencesView.swift in Sources */,
+				F40D8DF22D5E0BAA002892F4 /* CoordinateGeofenceManager.swift in Sources */,
 				F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */,
-				F47E038D2D5DCCC900EEEC85 /* RadialGeofenceView.swift in Sources */,
+				F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */,
+				F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */,
 				F47E03892D5DC73C00EEEC85 /* HomeScreenView.swift in Sources */,
 				F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */,
 				F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */,
+				F40D8DEE2D5E0B85002892F4 /* DrawGeofenceManager.swift in Sources */,
 				F47E03912D5DCDA200EEEC85 /* DrawGeofenceView.swift in Sources */,
 				F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */,
+				F40D8DF02D5E0B97002892F4 /* CircularGeofenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

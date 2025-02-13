@@ -13,7 +13,7 @@ struct CreateGeofenceView: View {
                 
                 VStack(spacing: 15) {
                     ///Mark:- Circular Geofence Button
-                    NavigationLink(destination: RadialGeofenceView()) {
+                    NavigationLink(destination: CircularGeofenceView()) {
                         VStack {
                             Image(systemName: "circle.dotted.circle") // More relevant icon
                                 .font(.system(size: 35))

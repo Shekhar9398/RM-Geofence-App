@@ -1,20 +1,23 @@
-
 import SwiftUI
 
-struct CoordinateGeofenceView: View {
+struct CircularGeofenceView: View {
     @State private var latitude = ""
     @State private var longitude = ""
-    @State private var total = 0
-    
+    @State private var radius = ""
+
     var body: some View {
         VStack(spacing: 20) {
-            Text("please Enter Lattitudes and Longitudes for the geofence here")
-                .foregroundColor(.green)
+            Text("Please add a center and radius for the geofence")
+                .foregroundColor(.blue)
                 .bold()
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
 
             VStack(alignment: .leading, spacing: 15) {
+                Text("Set the center for geofence")
+                    .foregroundColor(.gray)
+                    .bold()
+
                 // Latitude
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Latitude")
@@ -34,36 +37,33 @@ struct CoordinateGeofenceView: View {
                     TextField("Enter Longitude", text: $longitude)
                         .textFieldStyle(RoundedTextFieldStyle())
                 }
-                
-                    Text("Total added Coordinates - \(total)")
-                    .padding()
 
-                // Add more Geofences Button
-                Button(action: {
-                    total += 1
-                }) {
-                    Text("Add +")
-                        .frame(maxWidth: 150, minHeight: 50)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                // Radius
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Set the Radius for geofence")
+                        .foregroundColor(.gray)
                         .bold()
+
+                    Text("Radius")
+                        .foregroundColor(.black)
+                        .bold()
+
+                    TextField("Enter Radius", text: $radius)
+                        .textFieldStyle(RoundedTextFieldStyle())
                 }
-                .padding(.top, 10)
-                
-                // Create Geofence Button
+
+                // Save Geofence Button
                 Button(action: {
-                   total = 0
+                    // Save geofence action
                 }) {
                     Text("Create Geofence")
                         .frame(maxWidth: .infinity, minHeight: 50)
-                        .background(Color.green)
+                        .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .bold()
                 }
                 .padding(.top, 10)
-                
             }
             .padding()
             .frame(maxWidth: 350)
@@ -73,5 +73,5 @@ struct CoordinateGeofenceView: View {
 }
 
 #Preview {
-    CoordinateGeofenceView()
+    CircularGeofenceView()
 }
