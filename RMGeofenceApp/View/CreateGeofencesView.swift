@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CreateGeofenceView: View {
+    ///Mark:- CreateGeofenceView - No need of NavigationView (aleready present at HomeScreenView)
     var body: some View {
             VStack(spacing: 20) {
                 Text("Select one of the options to create a Geofence area")
@@ -14,7 +15,7 @@ struct CreateGeofenceView: View {
                     ///Mark:- Circular Geofence Button
                     NavigationLink(destination: RadialGeofenceView()) {
                         VStack {
-                            Image(systemName: "circle.grid.3x3.fill") // More relevant icon
+                            Image(systemName: "circle.dotted.circle") // More relevant icon
                                 .font(.system(size: 35))
                             
                             Text("Circular")
