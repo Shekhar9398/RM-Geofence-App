@@ -7,38 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1EFC0947AF61C50BFC3927 /* Pods_RMGeofenceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5D6C916B795E8112D58A85 /* Pods_RMGeofenceApp.framework */; };
 		F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */; };
 		F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */; };
-		F40D8DEE2D5E0B85002892F4 /* DrawGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */; };
-		F40D8DF02D5E0B97002892F4 /* CircularGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */; };
-		F40D8DF22D5E0BAA002892F4 /* CoordinateGeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */; };
+		F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */; };
+		F40D8DF72D5E15CF002892F4 /* CircularMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */; };
 		F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */; };
 		F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E037A2D5DC6F800EEEC85 /* ContentView.swift */; };
 		F47E037D2D5DC6F900EEEC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */; };
 		F47E03802D5DC6F900EEEC85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47E037F2D5DC6F900EEEC85 /* Preview Assets.xcassets */; };
-		F47E03892D5DC73C00EEEC85 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */; };
+		F47E03892D5DC73C00EEEC85 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03882D5DC73C00EEEC85 /* HomeScreen.swift */; };
 		F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */; };
 		F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */; };
 		F47E03912D5DCDA200EEEC85 /* DrawGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */; };
-		F47E03932D5DCDB800EEEC85 /* CreateGeofencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */; };
+		F47E03932D5DCDB800EEEC85 /* CreateGeofenceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03922D5DCDB800EEEC85 /* CreateGeofenceScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D5D6C916B795E8112D58A85 /* Pods_RMGeofenceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RMGeofenceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCD6ED8AAC29569600DEBE8 /* Pods-RMGeofenceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMGeofenceApp.debug.xcconfig"; path = "Target Support Files/Pods-RMGeofenceApp/Pods-RMGeofenceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9EC7BFFAB3438165EDAA596D /* Pods-RMGeofenceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMGeofenceApp.release.xcconfig"; path = "Target Support Files/Pods-RMGeofenceApp/Pods-RMGeofenceApp.release.xcconfig"; sourceTree = "<group>"; };
 		F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
 		F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldStyle.swift; sourceTree = "<group>"; };
-		F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawGeofenceManager.swift; sourceTree = "<group>"; };
-		F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGeofenceManager.swift; sourceTree = "<group>"; };
-		F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateGeofenceManager.swift; sourceTree = "<group>"; };
+		F40D8DF32D5E12E7002892F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceManager.swift; sourceTree = "<group>"; };
+		F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMapView.swift; sourceTree = "<group>"; };
 		F47E03752D5DC6F800EEEC85 /* RMGeofenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMGeofenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGeofenceAppApp.swift; sourceTree = "<group>"; };
 		F47E037A2D5DC6F800EEEC85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F47E037F2D5DC6F900EEEC85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		F47E03882D5DC73C00EEEC85 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGeofenceView.swift; sourceTree = "<group>"; };
 		F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateGeofenceView.swift; sourceTree = "<group>"; };
 		F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawGeofenceView.swift; sourceTree = "<group>"; };
-		F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofencesView.swift; sourceTree = "<group>"; };
+		F47E03922D5DCDB800EEEC85 /* CreateGeofenceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofenceScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,20 +49,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1EFC0947AF61C50BFC3927 /* Pods_RMGeofenceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A275F0D2CF4A8B72C984BE29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DCD6ED8AAC29569600DEBE8 /* Pods-RMGeofenceApp.debug.xcconfig */,
+				9EC7BFFAB3438165EDAA596D /* Pods-RMGeofenceApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C5A31373DAF73A6A059CBF9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D6C916B795E8112D58A85 /* Pods_RMGeofenceApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F40D8DEC2D5E0B6C002892F4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				F40D8DEF2D5E0B97002892F4 /* CircularGeofenceManager.swift */,
-				F40D8DF12D5E0BAA002892F4 /* CoordinateGeofenceManager.swift */,
-				F40D8DED2D5E0B85002892F4 /* DrawGeofenceManager.swift */,
+				F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F40D8DF82D5E1BF7002892F4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F47E03882D5DC73C00EEEC85 /* HomeScreen.swift */,
+				F47E03922D5DCDB800EEEC85 /* CreateGeofenceScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F40D8DF92D5E1CE9002892F4 /* GoogleMapView */ = {
+			isa = PBXGroup;
+			children = (
+				F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */,
+			);
+			path = GoogleMapView;
 			sourceTree = "<group>";
 		};
 		F47E036C2D5DC6F800EEEC85 = {
@@ -67,6 +103,8 @@
 			children = (
 				F47E03772D5DC6F800EEEC85 /* RMGeofenceApp */,
 				F47E03762D5DC6F800EEEC85 /* Products */,
+				A275F0D2CF4A8B72C984BE29 /* Pods */,
+				C5A31373DAF73A6A059CBF9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				F47E03872D5DC71E00EEEC85 /* Main */,
+				F40D8DF32D5E12E7002892F4 /* Info.plist */,
+				F40D8DF82D5E1BF7002892F4 /* Screens */,
 				F47E03862D5DC70E00EEEC85 /* View */,
 				F40D8DEC2D5E0B6C002892F4 /* Managers */,
 				F47E03942D5DCE2500EEEC85 /* Styles */,
@@ -102,11 +142,10 @@
 		F47E03862D5DC70E00EEEC85 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F47E03882D5DC73C00EEEC85 /* HomeScreenView.swift */,
-				F47E03922D5DCDB800EEEC85 /* CreateGeofencesView.swift */,
-				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
-				F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */,
 				F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */,
+				F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */,
+				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
+				F40D8DF92D5E1CE9002892F4 /* GoogleMapView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F47E03832D5DC6F900EEEC85 /* Build configuration list for PBXNativeTarget "RMGeofenceApp" */;
 			buildPhases = (
+				68603FB200079D5D98A012F1 /* [CP] Check Pods Manifest.lock */,
 				F47E03712D5DC6F800EEEC85 /* Sources */,
 				F47E03722D5DC6F800EEEC85 /* Frameworks */,
 				F47E03732D5DC6F800EEEC85 /* Resources */,
+				C83BF72E2C590FE06F5FEBB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,23 +235,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68603FB200079D5D98A012F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RMGeofenceApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83BF72E2C590FE06F5FEBB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMGeofenceApp/Pods-RMGeofenceApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RMGeofenceApp/Pods-RMGeofenceApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RMGeofenceApp/Pods-RMGeofenceApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F47E03712D5DC6F800EEEC85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47E03932D5DCDB800EEEC85 /* CreateGeofencesView.swift in Sources */,
-				F40D8DF22D5E0BAA002892F4 /* CoordinateGeofenceManager.swift in Sources */,
+				F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */,
+				F47E03932D5DCDB800EEEC85 /* CreateGeofenceScreen.swift in Sources */,
 				F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */,
 				F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */,
 				F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */,
-				F47E03892D5DC73C00EEEC85 /* HomeScreenView.swift in Sources */,
+				F47E03892D5DC73C00EEEC85 /* HomeScreen.swift in Sources */,
 				F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */,
+				F40D8DF72D5E15CF002892F4 /* CircularMapView.swift in Sources */,
 				F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */,
-				F40D8DEE2D5E0B85002892F4 /* DrawGeofenceManager.swift in Sources */,
 				F47E03912D5DCDA200EEEC85 /* DrawGeofenceView.swift in Sources */,
 				F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */,
-				F40D8DF02D5E0B97002892F4 /* CircularGeofenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +336,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -317,7 +399,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -338,6 +420,7 @@
 		};
 		F47E03842D5DC6F900EEEC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DCD6ED8AAC29569600DEBE8 /* Pods-RMGeofenceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +429,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RMGeofenceApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RMGeofenceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide continuous map services.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide map services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +453,7 @@
 		};
 		F47E03852D5DC6F900EEEC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EC7BFFAB3438165EDAA596D /* Pods-RMGeofenceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -375,6 +462,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RMGeofenceApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RMGeofenceApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide continuous map services.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to provide map services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

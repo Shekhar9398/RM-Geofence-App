@@ -1,9 +1,13 @@
 import SwiftUI
+import CoreLocation
 
 struct CircularGeofenceView: View {
-    @State private var latitude = ""
-    @State private var longitude = ""
-    @State private var radius = ""
+    @State private var latitude = "18.516726"
+    @State private var longitude = "73.856255"
+    @State private var radius = "800"
+    @State private var showMap = false
+    @State private var centerCoordinate = CLLocationCoordinate2D()
+    @State private var geofenceRadius: CLLocationDistance = 0
 
     var body: some View {
         VStack(spacing: 20) {
@@ -25,7 +29,8 @@ struct CircularGeofenceView: View {
                         .bold()
 
                     TextField("Enter Latitude", text: $latitude)
-                        .textFieldStyle(RoundedTextFieldStyle())
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.decimalPad)
                 }
 
                 // Longitude
@@ -35,7 +40,8 @@ struct CircularGeofenceView: View {
                         .bold()
 
                     TextField("Enter Longitude", text: $longitude)
-                        .textFieldStyle(RoundedTextFieldStyle())
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.decimalPad)
                 }
 
                 // Radius
@@ -44,17 +50,22 @@ struct CircularGeofenceView: View {
                         .foregroundColor(.gray)
                         .bold()
 
-                    Text("Radius")
+                    Text("Radius (meters)")
                         .foregroundColor(.black)
                         .bold()
 
                     TextField("Enter Radius", text: $radius)
-                        .textFieldStyle(RoundedTextFieldStyle())
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.numberPad)
                 }
 
                 // Save Geofence Button
                 Button(action: {
-                    // Save geofence action
+                    if let lat = Double(latitude), let lon = Double(longitude), let rad = Double(radius) {
+                        centerCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                        geofenceRadius = rad
+                        showMap = true
+                    }
                 }) {
                     Text("Create Geofence")
                         .frame(maxWidth: .infinity, minHeight: 50)
@@ -67,11 +78,14 @@ struct CircularGeofenceView: View {
             }
             .padding()
             .frame(maxWidth: 350)
+
+            if showMap {
+                CircularMapView(centerCoordinate: centerCoordinate, radius: geofenceRadius)
+                    .frame(height: 300)
+                    .cornerRadius(10)
+                    .padding()
+            }
         }
         .padding()
     }
-}
-
-#Preview {
-    CircularGeofenceView()
 }
