@@ -7,7 +7,6 @@ struct CoordinateMapView: UIViewRepresentable {
     var coordinates: [CLLocationCoordinate2D]
     
     func makeUIView(context: Context) -> GMSMapView {
-        // Center the map on the first coordinate (or default to (0,0) if empty)
         let initialCoordinate = coordinates.first ?? CLLocationCoordinate2D(latitude: 0, longitude: 0)
         let camera = GMSCameraPosition.camera(
             withLatitude: initialCoordinate.latitude,

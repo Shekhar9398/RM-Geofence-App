@@ -1,4 +1,5 @@
 import SwiftUI
+import CoreLocation
 
 struct CreateGeofenceScreen: View {
     ///Mark:- CreateGeofenceView - No need of NavigationView (aleready present at HomeScreenView)
@@ -52,7 +53,3 @@ struct CreateGeofenceScreen: View {
         }
     }
 
-
-#Preview {
-    CreateGeofenceScreen()
-}
