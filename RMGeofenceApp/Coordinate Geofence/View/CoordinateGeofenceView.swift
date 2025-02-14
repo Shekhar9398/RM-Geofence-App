@@ -18,9 +18,17 @@ struct CoordinateGeofenceView: View {
                 
                 // Input fields for latitude and longitude
                 VStack(alignment: .leading, spacing: 15) {
+                    Text("Latitude")
+                        .foregroundColor(.black)
+                        .bold()
+                    
                     TextField("Latitude", text: $latitude)
                         .textFieldStyle(RoundedTextFieldStyle())
                         .keyboardType(.decimalPad)
+                    
+                    Text("Longitude")
+                        .foregroundColor(.black)
+                        .bold()
                     
                     TextField("Longitude", text: $longitude)
                         .textFieldStyle(RoundedTextFieldStyle())
@@ -117,6 +125,8 @@ struct CoordinateGeofenceView: View {
     }
 }
 
-#Preview {
-    CoordinateGeofenceView()
+struct CoordinateGeofenceView_Previews: PreviewProvider {
+    static var previews: some View {
+        CoordinateGeofenceView()
+    }
 }

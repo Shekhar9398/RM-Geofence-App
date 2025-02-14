@@ -153,17 +153,10 @@
 		F44CF18F2D5F147B00AC9916 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F44CF19D2D5F2E8900AC9916 /* Extensions */,
 				F47E03942D5DCE2500EEEC85 /* Styles */,
-				F44CF1902D5F157200AC9916 /* getRandomColor.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		F44CF1932D5F1F3500AC9916 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F44CF19C2D5F2CFD00AC9916 /* Model */ = {
@@ -172,6 +165,14 @@
 				F44CF19A2D5F2CE500AC9916 /* Coordinate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F44CF19D2D5F2E8900AC9916 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F44CF1902D5F157200AC9916 /* getRandomColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F47E036C2D5DC6F800EEEC85 = {
@@ -195,7 +196,6 @@
 		F47E03772D5DC6F800EEEC85 /* RMGeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
-				F44CF1932D5F1F3500AC9916 /* Views */,
 				F47E03872D5DC71E00EEEC85 /* Main */,
 				F40D8DF32D5E12E7002892F4 /* Info.plist */,
 				F40D8DF82D5E1BF7002892F4 /* Screens */,
