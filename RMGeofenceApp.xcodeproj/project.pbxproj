@@ -12,6 +12,8 @@
 		F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */; };
 		F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */; };
 		F40D8DF72D5E15CF002892F4 /* CircularMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */; };
+		F44CF1912D5F157200AC9916 /* getRandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1902D5F157200AC9916 /* getRandomColor.swift */; };
+		F44CF1972D5F231500AC9916 /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */; };
 		F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */; };
 		F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E037A2D5DC6F800EEEC85 /* ContentView.swift */; };
 		F47E037D2D5DC6F900EEEC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		F40D8DF32D5E12E7002892F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceManager.swift; sourceTree = "<group>"; };
 		F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMapView.swift; sourceTree = "<group>"; };
+		F44CF1902D5F157200AC9916 /* getRandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getRandomColor.swift; sourceTree = "<group>"; };
+		F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
 		F47E03752D5DC6F800EEEC85 /* RMGeofenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMGeofenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47E03782D5DC6F800EEEC85 /* RMGeofenceAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGeofenceAppApp.swift; sourceTree = "<group>"; };
 		F47E037A2D5DC6F800EEEC85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,12 +77,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F40D8DEC2D5E0B6C002892F4 /* Managers */ = {
+		F40D8DEC2D5E0B6C002892F4 /* Geofence Manager */ = {
 			isa = PBXGroup;
 			children = (
 				F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */,
 			);
-			path = Managers;
+			path = "Geofence Manager";
 			sourceTree = "<group>";
 		};
 		F40D8DF82D5E1BF7002892F4 /* Screens */ = {
@@ -90,12 +94,70 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		F40D8DF92D5E1CE9002892F4 /* GoogleMapView */ = {
+		F44CF1892D5F139000AC9916 /* Circular Geofence */ = {
 			isa = PBXGroup;
 			children = (
-				F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */,
+				F44CF18A2D5F13A400AC9916 /* View */,
 			);
-			path = GoogleMapView;
+			path = "Circular Geofence";
+			sourceTree = "<group>";
+		};
+		F44CF18A2D5F13A400AC9916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
+				F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */,
+				F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F44CF18B2D5F13C700AC9916 /* Coordinate Geofence */ = {
+			isa = PBXGroup;
+			children = (
+				F44CF18C2D5F13E200AC9916 /* View */,
+			);
+			path = "Coordinate Geofence";
+			sourceTree = "<group>";
+		};
+		F44CF18C2D5F13E200AC9916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F44CF18D2D5F13F000AC9916 /* Draw Geofence */ = {
+			isa = PBXGroup;
+			children = (
+				F44CF18E2D5F13FB00AC9916 /* View */,
+			);
+			path = "Draw Geofence";
+			sourceTree = "<group>";
+		};
+		F44CF18E2D5F13FB00AC9916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F44CF18F2D5F147B00AC9916 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F47E03942D5DCE2500EEEC85 /* Styles */,
+				F44CF1902D5F157200AC9916 /* getRandomColor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F44CF1932D5F1F3500AC9916 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F47E036C2D5DC6F800EEEC85 = {
@@ -119,12 +181,15 @@
 		F47E03772D5DC6F800EEEC85 /* RMGeofenceApp */ = {
 			isa = PBXGroup;
 			children = (
+				F44CF1932D5F1F3500AC9916 /* Views */,
 				F47E03872D5DC71E00EEEC85 /* Main */,
 				F40D8DF32D5E12E7002892F4 /* Info.plist */,
 				F40D8DF82D5E1BF7002892F4 /* Screens */,
-				F47E03862D5DC70E00EEEC85 /* View */,
-				F40D8DEC2D5E0B6C002892F4 /* Managers */,
-				F47E03942D5DCE2500EEEC85 /* Styles */,
+				F44CF1892D5F139000AC9916 /* Circular Geofence */,
+				F44CF18B2D5F13C700AC9916 /* Coordinate Geofence */,
+				F44CF18D2D5F13F000AC9916 /* Draw Geofence */,
+				F40D8DEC2D5E0B6C002892F4 /* Geofence Manager */,
+				F44CF18F2D5F147B00AC9916 /* Utils */,
 				F47E037C2D5DC6F900EEEC85 /* Assets.xcassets */,
 				F47E037E2D5DC6F900EEEC85 /* Preview Content */,
 			);
@@ -137,17 +202,6 @@
 				F47E037F2D5DC6F900EEEC85 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F47E03862D5DC70E00EEEC85 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F47E03902D5DCDA200EEEC85 /* DrawGeofenceView.swift */,
-				F47E038E2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift */,
-				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
-				F40D8DF92D5E1CE9002892F4 /* GoogleMapView */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F47E03872D5DC71E00EEEC85 /* Main */ = {
@@ -282,8 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44CF1972D5F231500AC9916 /* FullScreenMapView.swift in Sources */,
 				F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */,
 				F47E03932D5DCDB800EEEC85 /* CreateGeofenceScreen.swift in Sources */,
+				F44CF1912D5F157200AC9916 /* getRandomColor.swift in Sources */,
 				F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */,
 				F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */,
 				F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */,
