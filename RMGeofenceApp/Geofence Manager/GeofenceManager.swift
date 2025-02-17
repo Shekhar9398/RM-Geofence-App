@@ -30,4 +30,9 @@ class GeofenceManager {
         UserDefaults.standard.removeObject(forKey: "geofences")
         NotificationCenter.default.post(name: NSNotification.Name("GeofencesCleared"), object: nil)
     }
+
+    // Save a geofence from the coordinates entered in the CoordinateGeofenceView
+    func saveCoordinateGeofence(title: String, coordinate: CLLocationCoordinate2D) {
+        saveGeofence(title: title, coordinate: coordinate, radius: 500) // Default radius for coordinate-based geofence
+    }
 }
