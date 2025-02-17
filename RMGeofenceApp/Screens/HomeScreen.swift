@@ -13,7 +13,7 @@ struct HomeScreen: View {
                     .padding()
                 
                 ///Mark:- Monitor Geofence Button
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: MonitorGeofenceView()) {
                     VStack {
                         Image(systemName: "dot.radiowaves.left.and.right") // More relevant icon
                             .font(.system(size: 35))
