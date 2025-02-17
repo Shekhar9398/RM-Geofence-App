@@ -11,10 +11,9 @@
 		F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DE82D5DD734002892F4 /* RoundedButtonStyle.swift */; };
 		F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */; };
 		F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */; };
-		F40D8DF72D5E15CF002892F4 /* CircularMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */; };
+		F40D8DF72D5E15CF002892F4 /* CreateGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF62D5E15CF002892F4 /* CreateGeofenceView.swift */; };
 		F42F51AD2D634436004B51FC /* MonitorGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */; };
-		F42F51B02D634B59004B51FC /* CreateGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51AF2D634B59004B51FC /* CreateGeofenceView.swift */; };
-		F42F51B62D635677004B51FC /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51B52D635677004B51FC /* MapDetailView.swift */; };
+		F42F51B02D634B59004B51FC /* MonitorCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */; };
 		F44CF1912D5F157200AC9916 /* getRandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1902D5F157200AC9916 /* getRandomColor.swift */; };
 		F44CF1972D5F231500AC9916 /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */; };
 		F44CF1992D5F28AA00AC9916 /* CoordinateMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1982D5F28AA00AC9916 /* CoordinateMapView.swift */; };
@@ -40,10 +39,9 @@
 		F40D8DEA2D5E01FF002892F4 /* RoundedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldStyle.swift; sourceTree = "<group>"; };
 		F40D8DF32D5E12E7002892F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceManager.swift; sourceTree = "<group>"; };
-		F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularMapView.swift; sourceTree = "<group>"; };
+		F40D8DF62D5E15CF002892F4 /* CreateGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofenceView.swift; sourceTree = "<group>"; };
 		F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorGeofenceView.swift; sourceTree = "<group>"; };
-		F42F51AF2D634B59004B51FC /* CreateGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofenceView.swift; sourceTree = "<group>"; };
-		F42F51B52D635677004B51FC /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
+		F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorCircularView.swift; sourceTree = "<group>"; };
 		F44CF1902D5F157200AC9916 /* getRandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getRandomColor.swift; sourceTree = "<group>"; };
 		F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
 		F44CF1982D5F28AA00AC9916 /* CoordinateMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateMapView.swift; sourceTree = "<group>"; };
@@ -112,8 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */,
-				F42F51AF2D634B59004B51FC /* CreateGeofenceView.swift */,
-				F42F51B52D635677004B51FC /* MapDetailView.swift */,
+				F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */,
 			);
 			path = Monitor;
 			sourceTree = "<group>";
@@ -130,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F47E038C2D5DCCC900EEEC85 /* CircularGeofenceView.swift */,
-				F40D8DF62D5E15CF002892F4 /* CircularMapView.swift */,
+				F40D8DF62D5E15CF002892F4 /* CreateGeofenceView.swift */,
 				F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */,
 			);
 			path = View;
@@ -382,14 +379,13 @@
 				F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */,
 				F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */,
 				F47E03892D5DC73C00EEEC85 /* HomeScreen.swift in Sources */,
-				F42F51B02D634B59004B51FC /* CreateGeofenceView.swift in Sources */,
+				F42F51B02D634B59004B51FC /* MonitorCircularView.swift in Sources */,
 				F44CF1992D5F28AA00AC9916 /* CoordinateMapView.swift in Sources */,
 				F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */,
 				F42F51AD2D634436004B51FC /* MonitorGeofenceView.swift in Sources */,
 				F44CF19B2D5F2CE500AC9916 /* Coordinate.swift in Sources */,
-				F42F51B62D635677004B51FC /* MapDetailView.swift in Sources */,
 				F44CF1A12D5F7DBF00AC9916 /* DrawingMapView.swift in Sources */,
-				F40D8DF72D5E15CF002892F4 /* CircularMapView.swift in Sources */,
+				F40D8DF72D5E15CF002892F4 /* CreateGeofenceView.swift in Sources */,
 				F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */,
 				F47E03912D5DCDA200EEEC85 /* DrawGeofenceView.swift in Sources */,
 				F47E03792D5DC6F800EEEC85 /* RMGeofenceAppApp.swift in Sources */,

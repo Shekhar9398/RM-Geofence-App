@@ -88,7 +88,7 @@ struct CircularGeofenceView: View {
             
             if showMap {
                 ZStack {
-                    CircularMapView(centerCoordinate: centerCoordinate, radius: geofenceRadius, title: title)
+                    CreateGeofenceView(centerCoordinate: centerCoordinate, radius: geofenceRadius, title: title)
                         .frame(height: 300)
                         .cornerRadius(10)
                         .padding()

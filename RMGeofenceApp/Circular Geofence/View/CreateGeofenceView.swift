@@ -1,7 +1,7 @@
 import SwiftUI
 import GoogleMaps
 
-struct CircularMapView: UIViewRepresentable {
+struct CreateGeofenceView: UIViewRepresentable {
     var centerCoordinate: CLLocationCoordinate2D
     var radius: CLLocationDistance
     var title: String

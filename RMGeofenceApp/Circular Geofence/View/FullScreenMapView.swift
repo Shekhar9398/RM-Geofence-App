@@ -9,7 +9,7 @@ struct FullScreenMapView: View {
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            CircularMapView(centerCoordinate: centerCoordinate, radius: radius, title: title)
+            CreateGeofenceView(centerCoordinate: centerCoordinate, radius: radius, title: title)
                 .edgesIgnoringSafeArea(.all)
 
             Button(action: {
