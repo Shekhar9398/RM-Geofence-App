@@ -6,7 +6,9 @@ import CoreLocation
 struct DrawGeofenceView: View {
     @State private var coordinates: [CLLocationCoordinate2D] = []
     @State private var isDrawing: Bool = false
-
+    @State private var geofenceName: String = ""
+    @State private var geofenceColor: UIColor = .blue
+    
     var body: some View {
         VStack(spacing: 20) {
             Text("Draw a custom geofence area")
@@ -14,21 +16,18 @@ struct DrawGeofenceView: View {
                 .bold()
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
-            
-            if isDrawing {
-                DrawingMapView(coordinates: $coordinates, isDrawing: isDrawing)
-                    .frame(height: 400)
-                    .cornerRadius(10)
-                    .padding()
-            } else {
-                Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                    .frame(height: 400)
-                    .cornerRadius(10)
-                    .overlay(Text("Map is inactive").foregroundColor(.gray))
-                    .padding()
-            }
-            
+
+            // Geofence Name TextField
+            TextField("Enter Geofence Name", text: $geofenceName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 20)
+
+            // Drawing Map View
+            DrawingMapView(coordinates: $coordinates, isDrawingEnabled: $isDrawing)
+                .edgesIgnoringSafeArea(.all) // Full-screen map
+                .padding()
+
+            // Start/Stop Drawing Button
             Button(action: {
                 isDrawing.toggle()
             }) {
@@ -40,13 +39,15 @@ struct DrawGeofenceView: View {
                     .bold()
             }
             .padding(.horizontal, 20)
-            
+
+            // Clear Drawing Button
             if !coordinates.isEmpty {
                 Button(action: {
                     coordinates.removeAll()
+                    geofenceName = ""
                     isDrawing = false
                 }) {
-                    Text("Clear Drawing")
+                    Text("Clear Geofence")
                         .frame(maxWidth: .infinity, minHeight: 50)
                         .background(Color.gray)
                         .foregroundColor(.white)
@@ -55,7 +56,7 @@ struct DrawGeofenceView: View {
                 }
                 .padding(.horizontal, 20)
             }
-            
+
             Spacer()
         }
         .navigationTitle("Custom Geofence Drawing")
