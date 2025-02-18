@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */,
+				F42F51BB2D637AAD004B51FC /* CoordinateManager.swift */,
 			);
 			path = "Geofence Manager";
 			sourceTree = "<group>";
@@ -160,7 +161,6 @@
 		F44CF18B2D5F13C700AC9916 /* Coordinate Geofence */ = {
 			isa = PBXGroup;
 			children = (
-				F42F51BB2D637AAD004B51FC /* CoordinateManager.swift */,
 				F44CF19C2D5F2CFD00AC9916 /* Model */,
 				F44CF18C2D5F13E200AC9916 /* View */,
 			);

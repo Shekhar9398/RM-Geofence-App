@@ -4,6 +4,7 @@ import CoreLocation
 struct CoordinateGeofenceView: View {
     @State private var latitude = ""
     @State private var longitude = ""
+    @State private var title = ""
     @State private var coordinates: [Coordinate] = []
     @State private var showMapView = false
     @State private var showSaveButton = false
@@ -18,6 +19,14 @@ struct CoordinateGeofenceView: View {
                 .padding(.horizontal, 20)
             
             VStack(alignment: .leading, spacing: 15) {
+                Text("Name")
+                    .foregroundColor(.black)
+                    .bold()
+                
+                TextField("Enter Geofence Name", text: $title)
+                    .textFieldStyle(RoundedTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                
                 Text("Latitude")
                     .foregroundColor(.black)
                     .bold()
@@ -163,7 +172,7 @@ struct CoordinateGeofenceView: View {
     private func saveGeofence() {
         let geofence = Geofence(
             id: UUID(),
-            title: "Geofence at \(coordinates.first?.latitude ?? 0), \(coordinates.first?.longitude ?? 0)",
+            title: title,
             type: "coordinate",
             latitude: coordinates.first?.latitude,
             longitude: coordinates.first?.longitude,

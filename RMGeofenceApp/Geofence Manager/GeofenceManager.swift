@@ -50,35 +50,44 @@ class GeofenceManager {
     }
     
     // Convert stored geofences into Geofence objects
-       func getGeofences() -> [Geofence] {
-           let storedGeofences = loadGeofences()
-           return storedGeofences.compactMap { geofenceDict in
-               guard let title = geofenceDict["title"] as? String,
-                     let type = geofenceDict["type"] as? String else {
-                   return nil
-               }
-               
-               let id = UUID(uuidString: geofenceDict["id"] as? String ?? "") ?? UUID()
-               var latitude: Double?
-               var longitude: Double?
-               var radius: Double?
-               var coordinates: [Coordinate]?
-               
-               if type == "circular" {
-                   latitude = geofenceDict["latitude"] as? Double
-                   longitude = geofenceDict["longitude"] as? Double
-                   radius = geofenceDict["radius"] as? Double
-               } else if type == "coordinate" {
-                   if let coordinateData = geofenceDict["coordinates"] as? [[String: Double]] {
-                       // Map the coordinate data to [Coordinate]
-                       coordinates = coordinateData.compactMap { dict in
-                           guard let lat = dict["latitude"], let lon = dict["longitude"] else { return nil }
-                           return Coordinate(latitude: lat, longitude: lon)
-                       }
-                   }
-               }
-               
-               return Geofence(id: id, title: title, type: type, latitude: latitude, longitude: longitude, radius: radius, coordinates: coordinates)
-           }
-       }
+    func getGeofences() -> [Geofence] {
+        let storedGeofences = loadGeofences()
+        return storedGeofences.compactMap { geofenceDict in
+            guard let title = geofenceDict["title"] as? String,
+                  let type = geofenceDict["type"] as? String else {
+                return nil
+            }
+            
+            let id = UUID(uuidString: geofenceDict["id"] as? String ?? "") ?? UUID()
+            var latitude: Double?
+            var longitude: Double?
+            var radius: Double?
+            var coordinates: [Coordinate]?
+            
+            if type == "circular" {
+                latitude = geofenceDict["latitude"] as? Double
+                longitude = geofenceDict["longitude"] as? Double
+                radius = geofenceDict["radius"] as? Double
+            } else if type == "coordinate" {
+                if let coordinateData = geofenceDict["coordinates"] as? [[String: Double]] {
+                    coordinates = coordinateData.compactMap { dict in
+                        guard let lat = dict["latitude"], let lon = dict["longitude"] else { return nil }
+                        return Coordinate(latitude: lat, longitude: lon)
+                    }
+                }
+            }
+            
+            return Geofence(id: id, title: title, type: type, latitude: latitude, longitude: longitude, radius: radius, coordinates: coordinates)
+        }
+    }
+    
+    // Delete a specific geofence by id
+    func deleteGeofence(_ geofence: Geofence) {
+        var geofences = loadGeofences()
+        if let index = geofences.firstIndex(where: { ($0["id"] as? String) == geofence.id.uuidString }) {
+            geofences.remove(at: index)
+            UserDefaults.standard.set(geofences, forKey: "geofences")
+            NotificationCenter.default.post(name: NSNotification.Name("GeofenceDeleted"), object: nil)
+        }
+    }
 }
