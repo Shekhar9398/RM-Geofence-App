@@ -2,7 +2,6 @@ import Foundation
 import CoreLocation
 
 class CoordinateManager {
-    
     private static let coordinatesKey = "savedCoordinates"
     
     // Save coordinates to UserDefaults
@@ -33,4 +32,3 @@ class CoordinateManager {
         saveCoordinates(coordinates)
     }
 }
-

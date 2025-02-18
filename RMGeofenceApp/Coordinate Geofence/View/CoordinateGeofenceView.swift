@@ -5,9 +5,9 @@ struct CoordinateGeofenceView: View {
     @State private var latitude = ""
     @State private var longitude = ""
     @State private var coordinates: [Coordinate] = []
-    @State private var showMapView = false  // Triggers navigation to the map view
-    @State private var showSaveButton = false  // To control visibility of "Save Geofence" button
-    @State private var showAlert = false  // To control the alert visibility
+    @State private var showMapView = false
+    @State private var showSaveButton = false
+    @State private var showAlert = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -59,7 +59,7 @@ struct CoordinateGeofenceView: View {
             .padding()
             .frame(maxWidth: 350)
             
-            // List of entered coordinates with labels and a remove button
+            // List of entered coordinates
             if !coordinates.isEmpty {
                 List {
                     ForEach(Array(coordinates.enumerated()), id: \.element.id) { index, coordinate in
@@ -86,7 +86,7 @@ struct CoordinateGeofenceView: View {
             // Create Geofence Button
             Button(action: {
                 showMapView = true
-                showSaveButton = true  // Show the save geofence button after create geofence
+                showSaveButton = true
             }) {
                 Text("Create Geofence")
                     .frame(maxWidth: .infinity, minHeight: 50)
@@ -98,7 +98,7 @@ struct CoordinateGeofenceView: View {
             .padding(.horizontal, 20)
             .disabled(coordinates.count < 3)
             
-            // Save Geofence Button (only visible after Create Geofence is clicked)
+            // Save Geofence Button
             if showSaveButton {
                 Button(action: saveGeofence) {
                     Text("Save Geofence")
@@ -133,7 +133,6 @@ struct CoordinateGeofenceView: View {
         }
     }
     
-    // Adds a new coordinate if valid values are provided
     private func addCoordinate() {
         guard let lat = Double(latitude),
               let lon = Double(longitude) else { return }
@@ -144,47 +143,38 @@ struct CoordinateGeofenceView: View {
         saveCoordinates()
     }
     
-    // Removes a coordinate at the given index
     private func removeCoordinate(at index: Int) {
         CoordinateManager.removeCoordinate(at: index, from: &coordinates)
     }
     
-    // Clears all coordinates
     private func clearAllCoordinates() {
         coordinates.removeAll()
         CoordinateManager.clearCoordinates()
     }
     
-    // Saves coordinates to UserDefaults
     private func saveCoordinates() {
         CoordinateManager.saveCoordinates(coordinates)
     }
     
-    // Loads coordinates from UserDefaults
     private func loadCoordinates() {
         coordinates = CoordinateManager.loadCoordinates()
     }
     
-    // Save the geofence when the button is clicked
     private func saveGeofence() {
-        // Save geofence data, you can add additional fields if needed
-        let geofence = [
-            "title": "Geofence at \(coordinates.first?.latitude ?? 0), \(coordinates.first?.longitude ?? 0)",
-            "latitude": "\(coordinates.first?.latitude ?? 0)",
-            "longitude": "\(coordinates.first?.longitude ?? 0)",
-            "radius": "500" // Default radius for coordinate-based geofence
-        ]
+        let geofence = Geofence(
+            id: UUID(),
+            title: "Geofence at \(coordinates.first?.latitude ?? 0), \(coordinates.first?.longitude ?? 0)",
+            type: "coordinate",
+            latitude: coordinates.first?.latitude,
+            longitude: coordinates.first?.longitude,
+            radius: 500,
+            coordinates: coordinates
+        )
         
-        // Optionally, save geofence to UserDefaults or to any other persistent storage
-        GeofenceManager.shared.saveGeofence(title: geofence["title"] ?? "Geofence",
-                                             coordinate: CLLocationCoordinate2D(latitude: coordinates.first?.latitude ?? 0,
-                                                                                 longitude: coordinates.first?.longitude ?? 0),
-                                             radius: 500) // Default radius for coordinate geofence
+        GeofenceManager.shared.saveCoordinateGeofence(title: geofence.title, coordinates: coordinates)
         
-        // Show alert to notify user of success
         showAlert = true
         
-        // Clear the list of coordinates after saving
         coordinates.removeAll()
         showSaveButton = false
     }

@@ -13,10 +13,10 @@
 		F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */; };
 		F40D8DF72D5E15CF002892F4 /* CreateGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D8DF62D5E15CF002892F4 /* CreateGeofenceView.swift */; };
 		F42F51AD2D634436004B51FC /* MonitorGeofenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */; };
-		F42F51B02D634B59004B51FC /* MonitorCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */; };
-		F42F51B82D637983004B51FC /* FullscreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51B72D637983004B51FC /* FullscreenMapView.swift */; };
 		F42F51BA2D637997004B51FC /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51B92D637997004B51FC /* GoogleMapView.swift */; };
 		F42F51BC2D637AAD004B51FC /* CoordinateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F51BB2D637AAD004B51FC /* CoordinateManager.swift */; };
+		F44C55742D646D74005FF0FC /* GeofenceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C55732D646D74005FF0FC /* GeofenceMapView.swift */; };
+		F44C55782D646E55005FF0FC /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C55772D646E55005FF0FC /* Geofence.swift */; };
 		F44CF1912D5F157200AC9916 /* getRandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1902D5F157200AC9916 /* getRandomColor.swift */; };
 		F44CF1972D5F231500AC9916 /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */; };
 		F44CF1992D5F28AA00AC9916 /* CoordinateMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44CF1982D5F28AA00AC9916 /* CoordinateMapView.swift */; };
@@ -44,10 +44,10 @@
 		F40D8DF42D5E12F2002892F4 /* GeofenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceManager.swift; sourceTree = "<group>"; };
 		F40D8DF62D5E15CF002892F4 /* CreateGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGeofenceView.swift; sourceTree = "<group>"; };
 		F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorGeofenceView.swift; sourceTree = "<group>"; };
-		F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorCircularView.swift; sourceTree = "<group>"; };
-		F42F51B72D637983004B51FC /* FullscreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenMapView.swift; sourceTree = "<group>"; };
 		F42F51B92D637997004B51FC /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
 		F42F51BB2D637AAD004B51FC /* CoordinateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateManager.swift; sourceTree = "<group>"; };
+		F44C55732D646D74005FF0FC /* GeofenceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceMapView.swift; sourceTree = "<group>"; };
+		F44C55772D646E55005FF0FC /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		F44CF1902D5F157200AC9916 /* getRandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getRandomColor.swift; sourceTree = "<group>"; };
 		F44CF1962D5F231500AC9916 /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
 		F44CF1982D5F28AA00AC9916 /* CoordinateMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateMapView.swift; sourceTree = "<group>"; };
@@ -115,12 +115,28 @@
 		F42F51AE2D634B50004B51FC /* Monitor */ = {
 			isa = PBXGroup;
 			children = (
-				F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */,
-				F42F51AF2D634B59004B51FC /* MonitorCircularView.swift */,
-				F42F51B72D637983004B51FC /* FullscreenMapView.swift */,
-				F42F51B92D637997004B51FC /* GoogleMapView.swift */,
+				F44C55762D646E47005FF0FC /* View */,
+				F44C55752D646E3A005FF0FC /* Model */,
 			);
 			path = Monitor;
+			sourceTree = "<group>";
+		};
+		F44C55752D646E3A005FF0FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F44C55772D646E55005FF0FC /* Geofence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F44C55762D646E47005FF0FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F42F51AC2D634436004B51FC /* MonitorGeofenceView.swift */,
+				F42F51B92D637997004B51FC /* GoogleMapView.swift */,
+				F44C55732D646D74005FF0FC /* GeofenceMapView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F44CF1892D5F139000AC9916 /* Circular Geofence */ = {
@@ -381,21 +397,21 @@
 			files = (
 				F44CF1972D5F231500AC9916 /* FullScreenMapView.swift in Sources */,
 				F40D8DF52D5E12F2002892F4 /* GeofenceManager.swift in Sources */,
+				F44C55782D646E55005FF0FC /* Geofence.swift in Sources */,
 				F42F51BC2D637AAD004B51FC /* CoordinateManager.swift in Sources */,
 				F47E03932D5DCDB800EEEC85 /* CreateGeofenceScreen.swift in Sources */,
 				F44CF1912D5F157200AC9916 /* getRandomColor.swift in Sources */,
 				F40D8DE92D5DD734002892F4 /* RoundedButtonStyle.swift in Sources */,
 				F44CF19F2D5F7D5E00AC9916 /* CustomPolygonDrawingView.swift in Sources */,
 				F40D8DEB2D5E01FF002892F4 /* RoundedTextFieldStyle.swift in Sources */,
+				F44C55742D646D74005FF0FC /* GeofenceMapView.swift in Sources */,
 				F47E038D2D5DCCC900EEEC85 /* CircularGeofenceView.swift in Sources */,
 				F42F51BA2D637997004B51FC /* GoogleMapView.swift in Sources */,
 				F47E03892D5DC73C00EEEC85 /* HomeScreen.swift in Sources */,
-				F42F51B02D634B59004B51FC /* MonitorCircularView.swift in Sources */,
 				F44CF1992D5F28AA00AC9916 /* CoordinateMapView.swift in Sources */,
 				F47E037B2D5DC6F800EEEC85 /* ContentView.swift in Sources */,
 				F42F51AD2D634436004B51FC /* MonitorGeofenceView.swift in Sources */,
 				F44CF19B2D5F2CE500AC9916 /* Coordinate.swift in Sources */,
-				F42F51B82D637983004B51FC /* FullscreenMapView.swift in Sources */,
 				F44CF1A12D5F7DBF00AC9916 /* DrawingMapView.swift in Sources */,
 				F40D8DF72D5E15CF002892F4 /* CreateGeofenceView.swift in Sources */,
 				F47E038F2D5DCD7300EEEC85 /* CoordinateGeofenceView.swift in Sources */,
@@ -535,6 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RMGeofenceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = G6A84U52VG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RMGeofenceApp/Info.plist;
@@ -568,6 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RMGeofenceApp/Preview Content\"";
+				DEVELOPMENT_TEAM = G6A84U52VG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RMGeofenceApp/Info.plist;

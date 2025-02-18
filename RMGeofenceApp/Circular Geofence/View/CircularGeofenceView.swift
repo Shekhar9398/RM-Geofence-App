@@ -123,19 +123,26 @@ struct CircularGeofenceView: View {
     }
     
     private func saveGeofence() {
-        let geofence = [
-            "title": title,
-            "latitude": latitude,
-            "longitude": longitude,
-            "radius": radius
-        ]
+        let geofence = Geofence(
+            id: UUID(),
+            title: title,
+            type: "circular",
+            latitude: centerCoordinate.latitude,
+            longitude: centerCoordinate.longitude,
+            radius: geofenceRadius,
+            coordinates: nil  // Circular geofence doesn't need coordinates
+        )
         
-        var savedGeofences = UserDefaults.standard.array(forKey: "geofences") as? [[String: String]] ?? []
-        savedGeofences.append(geofence)
-        UserDefaults.standard.set(savedGeofences, forKey: "geofences")
+        GeofenceManager.shared.saveGeofence(title: geofence.title, coordinate: centerCoordinate, radius: geofenceRadius, type: geofence.type)
         
-        // Notify MonitorGeofenceView
-        NotificationCenter.default.post(name: NSNotification.Name("GeofenceSaved"), object: nil)
         showAlert = true
+        showSaveButton = false
+        showMap = false
+    }
+}
+
+struct CircularGeofenceView_Previews: PreviewProvider {
+    static var previews: some View {
+        CircularGeofenceView()
     }
 }
