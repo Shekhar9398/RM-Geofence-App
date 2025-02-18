@@ -6,7 +6,7 @@ class GeofenceManager {
     
     private init() {}
     
-    // Save a geofence to UserDefaults
+    // Save a circular geofence to UserDefaults
     func saveGeofence(title: String, coordinate: CLLocationCoordinate2D, radius: Double, type: String) {
         var geofences = loadGeofences()
         
@@ -29,9 +29,10 @@ class GeofenceManager {
         let geofence: [String: Any] = [
             "id": UUID().uuidString,
             "title": title,
-            "type": "coordinate",
+            "type": "coordinate",  // Indicating this is a coordinate-based geofence
             "coordinates": coordinates.map { ["latitude": $0.latitude, "longitude": $0.longitude] }
         ]
+        
         var geofences = loadGeofences()
         geofences.append(geofence)
         UserDefaults.standard.set(geofences, forKey: "geofences")

@@ -10,13 +10,13 @@ struct DrawingMapView: UIViewRepresentable {
     }
 
     func makeUIView(context: Context) -> GMSMapView {
-        let initialCoordinate = coordinates.first ?? CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
+        let initialCoordinate = coordinates.first ?? CLLocationCoordinate2D(latitude: 18.516726, longitude: 73.856255)
         let camera = GMSCameraPosition.camera(withLatitude: initialCoordinate.latitude,
                                               longitude: initialCoordinate.longitude,
                                               zoom: 12)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.delegate = context.coordinator
-        context.coordinator.mapView = mapView  // Store reference in Coordinator
+        context.coordinator.mapView = mapView
 
         let panGesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePanGesture(_:)))
         panGesture.maximumNumberOfTouches = 1
@@ -57,7 +57,7 @@ struct DrawingMapView: UIViewRepresentable {
 
     class Coordinator: NSObject, GMSMapViewDelegate {
         var parent: DrawingMapView
-        var mapView: GMSMapView? // Store reference to mapView
+        var mapView: GMSMapView?
         var liveDrawingPath: GMSMutablePath?
         var liveDrawingPolyline: GMSPolyline?
 
