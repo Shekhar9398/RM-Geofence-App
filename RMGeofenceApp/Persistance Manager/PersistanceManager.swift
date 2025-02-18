@@ -1,8 +1,8 @@
 import Foundation
 import CoreLocation
 
-class GeofenceManager {
-    static let shared = GeofenceManager()
+class PersistanceManager {
+    static let shared = PersistanceManager()
     
     private init() {}
     

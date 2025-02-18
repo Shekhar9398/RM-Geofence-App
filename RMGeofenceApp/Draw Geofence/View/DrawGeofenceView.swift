@@ -9,7 +9,7 @@ struct DrawGeofenceView: View {
     @State private var geofenceName: String = ""
     @State private var geofenceColor: UIColor = .blue
     @State private var showSaveButton: Bool = false  // To control visibility of the save button
-    @State private var showAlert: Bool = false  // To show success alert
+    @State private var showAlert: Bool = false  
     
     var body: some View {
         VStack(spacing: 20) {
@@ -20,9 +20,16 @@ struct DrawGeofenceView: View {
                 .padding(.horizontal, 20)
 
             // Geofence Name TextField
-            TextField("Enter Geofence Name", text: $geofenceName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 20)
+            VStack(alignment: .leading, spacing: 15) {
+                Text("Name")
+                    .foregroundColor(.black)
+                    .bold()
+                    .padding(.horizontal, 20)
+                
+                TextField("Enter Geofence Name", text: $geofenceName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal, 20)
+            }
 
             // Drawing Map View
             DrawingMapView(coordinates: $coordinates, isDrawingEnabled: $isDrawing)
@@ -96,7 +103,7 @@ struct DrawGeofenceView: View {
         let coordinateObjects = coordinates.map { Coordinate(latitude: $0.latitude, longitude: $0.longitude) }
 
         // Save geofence using GeofenceManager
-        GeofenceManager.shared.saveCoordinateGeofence(title: geofenceName, coordinates: coordinateObjects)
+        PersistanceManager.shared.saveCoordinateGeofence(title: geofenceName, coordinates: coordinateObjects)
         
         // Show success alert
         showAlert = true

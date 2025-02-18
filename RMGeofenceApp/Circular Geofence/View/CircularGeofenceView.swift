@@ -133,7 +133,7 @@ struct CircularGeofenceView: View {
             coordinates: nil  // Circular geofence doesn't need coordinates
         )
         
-        GeofenceManager.shared.saveGeofence(title: geofence.title, coordinate: centerCoordinate, radius: geofenceRadius, type: geofence.type)
+        PersistanceManager.shared.saveGeofence(title: geofence.title, coordinate: centerCoordinate, radius: geofenceRadius, type: geofence.type)
         
         showAlert = true
         showSaveButton = false

@@ -130,9 +130,6 @@ struct CoordinateGeofenceView: View {
             )
         }
         .navigationTitle("Geofence Coordinates")
-        .onAppear {
-            loadCoordinates()
-        }
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Success"),
@@ -149,24 +146,14 @@ struct CoordinateGeofenceView: View {
         coordinates.append(newCoordinate)
         latitude = ""
         longitude = ""
-        saveCoordinates()
     }
     
     private func removeCoordinate(at index: Int) {
-        CoordinateManager.removeCoordinate(at: index, from: &coordinates)
+        coordinates.remove(at: index)
     }
     
     private func clearAllCoordinates() {
         coordinates.removeAll()
-        CoordinateManager.clearCoordinates()
-    }
-    
-    private func saveCoordinates() {
-        CoordinateManager.saveCoordinates(coordinates)
-    }
-    
-    private func loadCoordinates() {
-        coordinates = CoordinateManager.loadCoordinates()
     }
     
     private func saveGeofence() {
@@ -180,10 +167,13 @@ struct CoordinateGeofenceView: View {
             coordinates: coordinates
         )
         
-        GeofenceManager.shared.saveCoordinateGeofence(title: geofence.title, coordinates: coordinates)
+        // Save geofence using GeofenceManager
+        PersistanceManager.shared.saveCoordinateGeofence(title: geofence.title, coordinates: coordinates)
         
+        // Show success alert
         showAlert = true
         
+        // Clear coordinates and hide save button
         coordinates.removeAll()
         showSaveButton = false
     }

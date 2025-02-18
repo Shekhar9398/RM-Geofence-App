@@ -44,6 +44,8 @@ struct MonitorGeofenceView: View {
                 .padding()
             }
         }
+        .navigationTitle("Monitor Geofences")
+        .navigationBarTitleDisplayMode(.large)
         .onAppear {
             loadGeofences()
             NotificationCenter.default.addObserver(forName: NSNotification.Name("GeofenceSaved"), object: nil, queue: .main) { _ in
@@ -54,12 +56,12 @@ struct MonitorGeofenceView: View {
     
     // MARK: - Load Geofences
     private func loadGeofences() {
-        geofences = GeofenceManager.shared.getGeofences()
+        geofences = PersistanceManager.shared.getGeofences()
     }
     
     // MARK: - Delete Geofence
     private func deleteGeofence(_ geofence: Geofence) {
-        GeofenceManager.shared.deleteGeofence(geofence)
+        PersistanceManager.shared.deleteGeofence(geofence)
         loadGeofences() // Reload the geofences list after deletion
     }
 }
